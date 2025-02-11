@@ -1,5 +1,7 @@
-import java.util.Random;
+import java.util.Random	;
 import java.util.Scanner;
+import java.io.*;
+
 
 class train{
 	String startingPoint;
@@ -72,7 +74,7 @@ class train{
 			trains[i].S2=seats.nextInt(73);
 			trains[i].B1=seats.nextInt(73);
 			trains[i].A1=seats.nextInt(49);
-			trains[i].H1=seats.nextInt(25);	
+			trains[i].H1=seats.nextInt(25);
 		}
 		return trains;
 	}
@@ -96,7 +98,7 @@ class train{
 				break;
 			}
 		}
-		return index;
+		return index; 
 	}
 	
 	void book(train t,int noOfPassengers,char Class) {
@@ -121,7 +123,7 @@ class train{
 	}
 }
 public class RailwayBooking {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		train o=new train();
 		train[] trains;
 		trains=o.init();
@@ -142,3 +144,4 @@ public class RailwayBooking {
 	}
 
 }
+
